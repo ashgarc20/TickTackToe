@@ -11,5 +11,16 @@ int main()
     cout << " Option 1 : Player v. Player \n";
     cout << " Opiton 2 : Player v. Computer"<< endl; 
     
+    // Now we are going to get the game mode option from user
+    cin >> gameMode;
+    
+    /* Checking gameMode value 
+    cout << " Game mode value: " << gameMode; 
+    */
+    
+    
+    
+    
+    
     return 0;
 }
