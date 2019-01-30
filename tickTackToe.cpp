@@ -7,7 +7,9 @@ int main()
     int gameMode;
     
     cout << " Hello! Welcome to Ash's Tick Tack Toe. " << endl;
-    
+    cout << " Which Game Mode Would You Like to Play? \n";
+    cout << " Option 1 : Player v. Player \n";
+    cout << " Opiton 2 : Player v. Computer"<< endl; 
     
     return 0;
 }
