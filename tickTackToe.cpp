@@ -1,10 +1,12 @@
 #include <iostream>
+#include <string>
 using namespace std; 
 
 int main()
 { 
     // Going to start off by asking the player if it is player v. player or player v. computer 
-    int gameMode;
+    string gameMode;
+    
     
     cout << " Hello! Welcome to Ash's Tick Tack Toe. " << endl;
     //cout << " Which Game Mode Would You Like to Play? \n";
@@ -19,11 +21,12 @@ int main()
     */
     
     bool checkGameMode = false; // Bool is ONlY true or false
-    // This means that what the user entered is false until i check it "do and While"
+    // This means that what the user entered is false until it checks "do and While"
     do{ 
         cout << " Enter Game Mode: " << endl; 
         cin >> gameMode; 
-        if ((gameMode != 1) && (gameMode != 2)) {
+        
+        if (gameMode.compare("1") != 0 && gameMode.compare("2") != 0){
             cout << " Unvalid Input, Try Again." << endl;
         }
         else { 
