@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 using namespace std; 
 
@@ -27,6 +28,7 @@ int main()
         cin >> gameMode; 
         
         if (gameMode.compare("1") != 0 && gameMode.compare("2") != 0){
+            // compare is availabe form the <iostream> function
             cout << " Unvalid Input, Try Again." << endl;
         }
         else { 
@@ -34,6 +36,28 @@ int main()
         }
         
     }while (checkGameMode != true); 
+    
+    // creating an option for the user to continue to play player v. player 
+    //or exit because the player v. computer is not available.
+    
+    bool didUserContinue = false;
+    
+    if(gameMode.compare("2") ==0){
+        // I am going to advise the user that player v. computer is not
+        //available by opening a file and printing out the text and 
+        //asking the user wheather they want to continue or exit
+        string line;
+        ifstream myfile("pc_under_construction.txt");
+        if(myfile.is_open()){
+        
+            while(getline(myfile, line)){
+                cout << line << endl;
+            }
+            myfile.close();
+        }
+        else {
+            cout << "Unable to open file\n"; 
+        }
     
     
     return 0;
