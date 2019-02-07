@@ -1,0 +1,4 @@
+Player v. computer is currently under construction. 
+If you wish to continue with player v. player 
+please enter 'continue' or if you wish to leave
+please enter 'exit'.

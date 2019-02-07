@@ -58,6 +58,7 @@ int main()
         else {
             cout << "Unable to open file\n"; 
         }
+    }
     
     
     return 0;
