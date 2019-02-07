@@ -7,6 +7,8 @@ int main()
 { 
     // Going to start off by asking the player if it is player v. player or player v. computer 
     string gameMode;
+    string next;
+    string gamerTags;
     
     
     cout << " Hello! Welcome to Ash's Tick Tack Toe. " << endl;
@@ -58,7 +60,40 @@ int main()
         else {
             cout << "Unable to open file\n"; 
         }
+        
+        
+        bool checkIfContinued = false;
+        
+        do {
+            cin >> next;
+            
+            if (next.compare("continue") == 0){
+                cout << "Player v. Player Activated!" << endl;
+                
+                checkIfContinued = true;
+                didUserContinue = true;
+            }
+            else if (next.compare("exit") == 0){
+                cout << "GoodBye!\n";
+                exit(0);
+            }    
+            
+            else {
+                cout << "Please enter valid response:\n";
+            }
+        
+        }while(checkIfContinued != true);
     }
+    if(gameMode.compare("1") == 0 || didUserContinue){
+        cout << "Great to have you! " << endl;
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     return 0;
